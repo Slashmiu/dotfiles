@@ -1,0 +1,145 @@
+* {
+  transition: none;
+  box-shadow: none;
+  font-family: Roboto;
+  font-size: 14px;
+  color: #00BCD4;
+}
+
+#waybar {
+  margin-top: 13px;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 16px;
+  border: 2px solid #00BCD4;
+}
+
+#workspaces {
+  margin: 0 3px;
+  color: transparent;
+}
+
+#workspaces button {
+  margin: 3px 0;
+  padding: 0 4px;
+}
+
+#workspaces button.visible {}
+
+#workspaces button.focused {
+  border-radius: 10px;
+  background-color: #34495E;
+}
+
+#workspaces button.urgent {
+  border-radius: 10px;
+}
+
+#workspaces button.urgent * {
+  color: rgba(246, 71, 71, 0.8);
+}
+
+#tray {
+  margin: 3px 2px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+#tray * {
+  padding: 0 6px;
+  border-left: transparent;
+}
+
+#tray *:first-child {
+  border-left: transparent;
+}
+
+#mode,
+#cpu,
+#disk,
+#memory,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#backlight,
+#mpd,
+#clock,
+#temperature {
+  margin: 4px 2px;
+  padding: 0 6px;
+  border-radius: 20px;
+  min-width: 10px;
+  background-color: transparent;
+}
+
+#battery {
+  margin: 4px 2px;
+  padding: 0 6px;
+  border-radius: 20px;
+  min-width: 10px;
+  background-color: transparent;
+
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #00FF33;
+  background-color: transparent;
+}
+
+@keyframes blink {
+  to {
+    background-color: transparent;
+    color: #bfc9ca;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: transparent;
+  color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: transparent;
+}
+
+#clock {
+  margin: 4px 2px;
+}
+
+#mpd * {
+  min-width: 10px;
+  font-size: 11px;
+  font-family: Roboto;
+}
+
+#custom-power {
+  margin: 4px 5px 4px 1px;
+  padding: 0 6px;
+  background-color: #800020;
+  border-radius: 10px;
+  min-width: 15px;
+}
+
+#custom-recorder,
+#custom-audiorec {
+  margin: 4px 2px;
+  padding: 0 6px;
+  background-color: rgba(175, 65, 84, 0.8);
+}
+
+#custom-launcher {
+  margin: 4px 1px 4px 5px;
+  padding: 0 6px;
+  background-color: #800020;
+  border-radius: 10px;
+  min-width: 15px;
+}
+
+#temperature.critical {
+  color: #FF5252;
+}

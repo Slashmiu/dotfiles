@@ -1,0 +1,21 @@
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_STATE_HOME="${HOME}/.local/state"
+
+export GOPATH="${XDG_DATA_HOME}/go"
+export PATH="${PATH}:${GOPATH}/bin"
+
+export PATH="${HOME}/.local/bin:$PATH"
+
+export PATH="${HOME}/.cargo/bin:$PATH"
+export RUSTUP_HOME="${XDG_DATA_HOME}/rustup"
+export CARGO_HOME="${XDG_DATA_HOME}/cargo"
+[ -d $CARGO_HOME ] && . "${CARGO_HOME}/env"
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages
+
+. "/home/slash/.local/share/cargo/env"                         
+export PATH=/home/slash/.nimble/bin:$PATH                      
+export PATH=~/.npm-global/bin:$PATH  
+
+export PATH=/home/slash/.local/share/gem/ruby/3.0.0/bin:$PATH

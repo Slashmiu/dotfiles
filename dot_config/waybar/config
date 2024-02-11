@@ -1,0 +1,209 @@
+{
+    "layer": "bottom",
+    "position": "bottom",
+    "height": 10,
+    "width": 1700,
+    "margin": "3, 0, 2, 0",
+    "modules-left": ["custom/launcher", "custom/updates", "sway/workspaces", "sway/mode", "custom/recorder", "custom/audiorec"],
+    "modules-center": ["mpd", "clock"],
+    "modules-right": ["disk", "cpu", "memory", "temperature", "backlight", "pulseaudio", "battery", "tray", "custom/power"],
+
+    "sway/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+//            "1": "󰲠 ",
+//            "2": "󰲢 ",
+//            "3": "󰲤 ",
+//            "4": "󰲦 ",
+//            "5": "󰲨 ",
+//            "6": "󰲪 ",
+//            "7": "󰲬 ",
+//            "8": "󰲮 ",
+
+            "1": "󰇊 ",
+            "2": "󰇋 ",
+            "3": "󰇌 ",
+            "4": "󰇍 ",
+            "5": "󰇎 ",
+            "6": "󰇏 ",
+            "7": "󰝮 ",
+            "8": "󱅒 ",
+            "urgent": " ",
+            "focused": " ",
+            "default": " "
+        }
+    },
+
+    "custom/launcher": {
+        "format": "󰣇",
+        "on-click": "exec rofi -show drun",
+        "tooltip": false,
+    },
+
+    "sway/window": {
+        "max-length": 25,
+        "tooltip": false
+    },
+
+    "sway/mode": {
+		"format": "{}"
+	},
+
+    "clock": {
+        "interval": 1,
+        "locale": "C", 
+        "format": "  {:%Y/%m/%d/%a %H:%M:%S}",
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "   {usage}%",
+        "max-length": 10,
+        "on-click": "kitty -e 'htop'"
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "  {used:0.2f}GB",
+
+        "max-length": 10,
+        "tooltip": false,
+        "warning": 70,
+        "critical": 90
+    },
+
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        //"format-charging": "⚡{capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-alt": "{icon}  {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+	      "format-critical": " {temperatureC}°",
+	      "format": " {temperatureC}°",
+    },
+
+    "network": {
+        "format": "{icon}",
+        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-right",
+        "format-wifi": "{icon} ({signalStrength}%)",
+        "format-icons": {
+            "wifi": ["󰖪", "󰖩" ,""],
+            "ethernet": ["󰈀"],
+            "disconnected": ["󰅛"],
+        },
+        "on-click": "kitty nmtui",
+        "tooltip-format": "{ifname}: {ipaddr}",
+    },
+
+    "pulseaudio": {
+      // "scroll-step": 1, // %, can be a float
+      "format": "{icon}  {volume}%  {format_source}",
+      "format-bluetooth": "{icon} {volume}% {format_source}",
+      "format-bluetooth-muted": " {format_source}",
+      "format-muted": "  {format_source}",
+      "format-source": " {volume}%",
+      "format-source-muted": "",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "🎧",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", " "]
+      },
+      "on-click": "pavucontrol"
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}  {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "on-scroll-down": "brightnessctl -c backlight set 1%-",
+        "on-scroll-up": "brightnessctl -c backlight set +1%"
+    },
+
+    "tray": {
+        "icon-size": 17
+    },
+
+    "disk": {
+        "format": "  {free}" 
+    },
+
+    "custom/recorder": {
+        "format": " Rec",
+        "format-disabled": " Off-air", //An empty format will hide the module.
+        "return-type": "json",
+        "interval": 1,
+        "exec": "echo '{\"class\": \"recording\"}'",
+        "exec-if": "pgrep wf-recorder",
+    },
+
+    "custom/audiorec": {
+        "format": "♬ Rec",
+        "format-disabled": "♬ Off-air", //An empty format will hide the module.
+        "return-type": "json",
+        "interval": 1,
+        "exec": "echo '{\"class\": \"audio recording\"}'",
+        "exec-if": "pgrep ffmpeg",
+    },
+
+    "mpd": {
+      "format": "{stateIcon} {artist} - {title}",
+      "format-disconnected": "🎶",
+      "format-stopped": "♪",
+      "interval": 10,
+      "consume-icons": {
+        "on": " " // Icon shows only when "consume" is on
+      },
+      "random-icons": {
+        "off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
+        "on": " "
+      },
+      "repeat-icons": {
+        "on": " "
+      },
+      "single-icons": {
+        "on": "1 "
+      },
+      "state-icons": {
+        "paused": "",
+        "playing": ""
+      },
+      "tooltip-format": "MPD (connected)",
+      "tooltip-format-disconnected": "MPD (disconnected)",
+      "max-length": 45
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "exec rofi -show power-menu",
+        "tooltip": false,
+    },
+
+    "custom/updates": {
+        "format": " {icon}  {}   ",
+        "return-type": "json",
+        "format-icons": {
+            "has-updates": " ",
+            "updated": "󰮯 "
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates"
+    },
+    
+}

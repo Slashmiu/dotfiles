@@ -1,0 +1,18 @@
+# zimfw plugin manager.
+zmodule archive
+zmodule pacman
+zmodule eriner
+zmodule fzf
+zmodule environment
+zmodule git
+zmodule input
+zmodule utility
+zmodule git-info
+zmodule exa 
+zmodule zsh-users/zsh-completions --fpath src
+zmodule completion
+zmodule zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-history-substring-search
+zmodule zsh-users/zsh-autosuggestions
+
+
