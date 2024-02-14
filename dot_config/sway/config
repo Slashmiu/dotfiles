@@ -75,7 +75,6 @@ exec ~/.azotebg
   exec blueman-applet
   for_window [app_id="blueman-manager"] floating enable
   exec nm-applet --indicator
-  exec wl-paste -t text --watch clipman store --no-persist
   exec fcitx5 -d
 
   bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -102,6 +101,7 @@ exec ~/.azotebg
     # Start your launcher
 
  bindsym $mod+d exec $menu
+ bindsym Control+semicolon  exec clipman pick -t rofi
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
