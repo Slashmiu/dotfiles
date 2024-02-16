@@ -75,7 +75,7 @@ time:
   utc: false
   style:
     foreground: dark_gray
-    background: 44
+    background: white
     decoration: []
   content: "  {{.time}} "
 
