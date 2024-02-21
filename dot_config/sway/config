@@ -76,6 +76,9 @@ exec ~/.azotebg
   for_window [app_id="blueman-manager"] floating enable
   exec nm-applet --indicator
   exec fcitx5 -d
+  exec wl-paste -t text --watch clipman store --no-persist
+  exec io.crow_translate.CrowTranslate    
+  for_window [app_id="io.crow_translate.CrowTranslate"] floating enable
 
   bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
   bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
@@ -99,10 +102,16 @@ exec ~/.azotebg
     bindsym $mod+Shift+q kill
 
     # Start your launcher
+    bindsym $mod+d exec $menu
+    bindsym Control+semicolon exec clipman pick -t rofi
 
- bindsym $mod+d exec $menu
- bindsym Control+semicolon  exec clipman pick -t rofi
-
+	# crowTranslate 
+    bindsym Control+Mod1+e exec dbus-send --type=method_call --dest=io.crow_translate.CrowTranslate /io/crow_translate/CrowTranslate/MainWindow io.crow_translate.CrowTranslate.MainWindow.translateSelection                                  
+    bindsym Control+Mod1+s exec dbus-send --type=method_call --dest=io.crow_translate.CrowTranslate /io/crow_translate/CrowTranslate/MainWindow io.crow_translate.CrowTranslate.MainWindow.speakSelection                            
+	bindsym Control+Mod1+f exec dbus-send --type=method_call --dest=io.crow_translate.CrowTranslate /io/crow_translate/CrowTranslate/MainWindow io.crow_translate.CrowTranslate.MainWindow.speakTranslatedSelection                            
+    bindsym Control+Mod1+g exec dbus-send --type=method_call --dest=io.crow_translate.CrowTranslate /io/crow_translate/CrowTranslate/MainWindow io.crow_translate.CrowTranslate.MainWindow.stopSpeaking                
+	bindsym Control+Mod1+o exec dbus-send --type=method_call --dest=io.crow_translate.CrowTranslate /io/crow_translate/CrowTranslate/MainWindow io.crow_translate.CrowTranslate.MainWindow.copyTranslatedSelection
+	   
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -113,7 +122,7 @@ exec ~/.azotebg
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    # Exit sway (logs you out of your Wayland session)
+    # Exit sway (logs you out of your iWayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
