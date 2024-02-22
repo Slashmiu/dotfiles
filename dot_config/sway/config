@@ -77,7 +77,7 @@ exec ~/.azotebg
   exec nm-applet --indicator
   exec fcitx5 -d
   exec wl-paste -t text --watch clipman store --no-persist
-  exec io.crow_translate.CrowTranslate    
+  exec crow    
   for_window [app_id="io.crow_translate.CrowTranslate"] floating enable
 
   bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
