@@ -1,6 +1,7 @@
 theme = "catppuccin_mocha"
 
 [editor]
+shell = "sakura"
 true-color = true
 line-number = "relative"
 mouse = false
@@ -26,6 +27,7 @@ mode.select = "SEL"
 
 [editor.lsp]
 display-inlay-hints = true
+snippets = true
 
 [editor.auto-pairs]
 '(' = ')'
