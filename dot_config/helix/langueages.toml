@@ -90,6 +90,22 @@ zls = { command = "zls" }
 blueprint-compiler = { command = "blueprint-compiler", args = ["lsp"] }
 typst-lsp = { command = "typst-lsp" }
 
+# introduce new language server
+[language-server.scls]
+command = "simple-completion-language-server"
+
+[language-server.scls.config]
+max_completion_items = 20     # set max completion results len for each group: words, snippets, unicode-input
+snippets_first = true         # completions will return before snippets by default
+feature_words = true          # enable completion by word
+feature_snippets = true       # enable snippets
+feature_unicode_input = true  # enable "unicode input"
+
+# write logs to /tmp/completion.log
+[language-server.scls.environment]
+RUST_LOG = "info,simple-completion-langauge-server=info"
+LOG_FILE = "/tmp/completion.log"
+
 [language-server.ansible-language-server]
 command = "ansible-language-server"
 args = ["--stdio"]
@@ -104,7 +120,6 @@ setType = true
 paramName = "All"
 paramType = true
 await = true
-
 
 [language-server.gopls]
 command = "gopls"
@@ -187,7 +202,7 @@ file-types = ["rs"]
 roots = ["Cargo.toml", "Cargo.lock"]
 auto-format = true
 comment-token = "//"
-language-servers = [ "rust-analyzer" ]
+language-servers = [ "scls", "rust-analyzer" ]
 indent = { tab-width = 4, unit = "    " }
 
 [language.auto-pairs]
@@ -1393,6 +1408,7 @@ scope = "git.commitmsg"
 roots = []
 file-types = ["COMMIT_EDITMSG"]
 comment-token = "#"
+language-servers = [ "scls" ]
 indent = { tab-width = 2, unit = "  " }
 rulers = [51, 73]
 text-width = 72
@@ -3005,3 +3021,11 @@ language-servers = [ "templ" ]
 name = "templ"
 source = { git = "https://github.com/vrischmann/tree-sitter-templ", rev = "ea56ac0655243490a4929a988f4eaa91dfccc995" }
 
+[[language]]
+name = "stub"
+scope = "text.stub"
+file-types = []
+shebangs = []
+roots = []
+auto-format = false
+language-servers = [ "scls" ]
