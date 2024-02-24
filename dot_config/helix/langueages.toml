@@ -765,8 +765,7 @@ args = ["exec", "rubocop", "--lsp"]
 [[language]]
 name = "ruby"
 auto-format = true
-language-servers = [
-  { name = "rubocop" }
+language-servers = [ "rubocop" ]
 
 [[grammar]]
 name = "ruby"
