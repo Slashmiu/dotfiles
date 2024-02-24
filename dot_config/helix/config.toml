@@ -1,7 +1,7 @@
 theme = "catppuccin_mocha"
 
 [editor]
-shell = "sakura"
+shell = "sh"
 true-color = true
 line-number = "relative"
 mouse = false
