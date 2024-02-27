@@ -16,8 +16,8 @@ select = "underline"
 hidden = false
 
 [editor.statusline]
-left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
-center = []
+left = ["mode", "spinner"]
+center = ["file-name", "read-only-indicator", "file-modification-indicator"]
 right = ["diagnostics", "selections", "register", "position", "file-encoding", "file-line-ending", "file-type"]
 separator = "│"
 mode.normal = "NOR"
@@ -25,8 +25,8 @@ mode.insert = "INS"
 mode.select = "SEL"
 
 [editor.lsp]
+display-messages = true
 display-inlay-hints = true
-snippets = true
 
 [editor.auto-pairs]
 '(' = ')'
