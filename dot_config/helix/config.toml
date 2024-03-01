@@ -6,6 +6,7 @@ line-number = "relative"
 mouse = false
 color-modes = true
 bufferline = "multiple"
+workspace-lsp-roots = ["bar"]
 
 [editor.cursor-shape]
 insert = "bar"
