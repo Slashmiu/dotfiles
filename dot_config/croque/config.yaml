@@ -1,8 +1,8 @@
 os:
   linux:
     style:
-      foreground: black
-      background: 44
+      foreground: white
+      background: 33
       decoration: []
     content: "  "
   mac:
