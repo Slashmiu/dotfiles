@@ -41,6 +41,7 @@ SAVEHIST=1000
 # tmux default          
 # fi
 
+#fzf.config
 export FZF_TMUX=1
 export FZF_TMUX_OPTS="-p 80%"
              
