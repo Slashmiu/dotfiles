@@ -103,13 +103,13 @@ export FZF_ALT_C_OPTS="--preview 'eza {} -h -T -F --no-user --no-time --no-files
 
 export RUNEWIDTH_EASTASIAN=0
 
-#bindkey "^[t" fzf-file-widget
+bindkey "^[t" fzf-file-widget
 
-#bindkey "^[r" fzf-history-widget
+bindkey "^[r" fzf-history-widget
 
-#bindkey -r "^T"
+bindkey -r "^T"
 
-#bindkey -r "^R"
+bindkey -r "^R"
             
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
