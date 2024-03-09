@@ -32,14 +32,14 @@ EOF
 # NOTE: 現時点では改行が正確ではない
 export FZF_CTRL_R_OPTS="--reverse --preview 'echo {}' --preview-window=border-sharp,down:3:hidden:wrap --bind '?:toggle-preview'"
 #export FZF_CTRL_R_OPTS=$(cat <<"EOF"
---preview '
-  echo {} \
-  | awk "{ sub(/\s*[0-9]*?\s*/, \"\"); gsub(/\\\\n/, \"\\n\"); print #}" \
-  | bat --color=always --language=sh --style=plain
-'
---preview-window 'bottom,40%,wrap'
-EOF
-)
+#--preview '
+#  echo {} \
+#  | awk "{ sub(/\s*[0-9]*?\s*/, \"\"); gsub(/\\\\n/, \"\\n\"); print #}" \
+#  | bat --color=always --language=sh --style=plain
+#'
+#--preview-window 'bottom,40%,wrap'
+#EOF
+#)
 
 local find_ignore="find ./ -type d \( -name '.git' -o -name 'node_modules' \) -prune -o -type"
 
