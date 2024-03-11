@@ -14,6 +14,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 source ~/.zim/init.zsh
 source <(command fx --init)
 eval "$(croque init zsh)"
+eval "$(zoxide init zsh)"
 HELIX_RUNTIME=~/.config/helix/runtime
 HISTFILE=~/.histfile
 HISTSIZE=1000
