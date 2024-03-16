@@ -46,9 +46,9 @@ add-zsh-hook -Uz chpwd chpwd-osc7-pwd
 # NOTE: 現時点では改行が正確ではない
 #export FZF_CTRL_R_OPTS=$(cat <<"EOF"
 #--preview 'fzf-prevew.sh{}
-   \
-  | awk "{ sub(/\s*[0-9]*?\s*/, \"\"); gsub(/\\\\n/, \"\\n\"); print }" \
-  | bat --color=always --language=sh --style=plain
+#   \
+#  | awk "{ sub(/\s*[0-9]*?\s*/, \"\"); gsub(/\\\\n/, \"\\n\"); print }" \
+#  | bat --color=always --language=sh --style=plain
 #'
 #--preview-window 'bottom,40%,wrap'
 #EOF
