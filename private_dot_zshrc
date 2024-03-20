@@ -15,7 +15,8 @@ source ~/.zim/init.zsh
 source <(command fx --init)
 eval "$(croque init zsh)"
 eval "$(zoxide init zsh)"
-HELIX_RUNTIME= ~/.config/helix/runtime;/home/slash/.local/share/cargo/bin/runtime
+HELIX_DEFAULT_RUNTIME=/usr/lib/helix/runtime 
+HELIX_RUNTIME= ~/.config/helix/runtime
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
