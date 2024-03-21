@@ -40,6 +40,7 @@ add-zsh-hook -Uz chpwd chpwd-osc7-pwd
 #--exit-0
 #--reverse
 #--bind ctrl-d:preview-page-down,ctrl-u:preview-page-up
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' --color=fg:#d0d0d0,bg:#121212,hl:#5f87af --color=fg+:#d0d0d0,bg+:#262626,hl+:#5fd7ff --color=info:#afaf87,prompt:#d7005f,pointer:#af5fff --color=marker:#87ff00,spinner:#af5fff,header:#87afaf'
 #EOF
 #)
 
@@ -98,9 +99,7 @@ export FZF_BASE=$HOME/.fzf
 #export FZF_CTRL_R_OPTS="--reverse --preview 'echo {}' --preview-window=border-sharp,down:3:hidden:wrap --bind '?:toggle-preview'"
 #export FZF_DEFAULT_COMMAND="rg --files --hidden 2> /dev/null --follow --glob '!.git/*'"
 export FZF_DEFAULT_OPTS="--ansi --no-separator --no-scrollbar --reverse --border=none \
---color=bg+:#1c1e26,bg:#1c1e26,spinner:#ee64ac,hl:#e95678 \
---color=fg:#d5d8da,header:#e95678,info:#e95678,pointer:#ee64ac \
---color=marker:#ee64ac,fg+:#d5d8da,prompt:#e95678,hl+:#e95678"
+--color=fg:#d0d0d0,bg:#121212,hl:#5f87af --color=fg+:#d0d0d0,bg+:#262626,hl+:#5fd7ff --color=info:#afaf87,prompt:#d7005f,pointer:#af5fff --color=marker:#87ff00,spinner:#af5fff,header:#87afaf"
 #export FZF_CTRL_T_COMMAND="rg --files --hidden 2> /dev/null --follow --glob '!.git/*'"
 #export FZF_CTRL_T_OPTS="--preview 'bat  --color=always --style=plain --line-range :100 {}' --preview-window=border-sharp,right:60%"
 #export FZF_ALT_C_COMMAND="fd -t d --hidden"
