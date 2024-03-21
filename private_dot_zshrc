@@ -35,7 +35,7 @@ add-zsh-hook -Uz chpwd chpwd-osc7-pwd
 #fzf.config
 export FZF_DEFAULT_OPTS=$(cat <<"EOF"
 --multi
---height=60%
+#--height=60%
 --select-1
 --exit-0
 --reverse
