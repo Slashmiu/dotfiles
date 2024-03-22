@@ -1,6 +1,7 @@
 theme = "catppuccin_mocha"
 
 [editor]
+shell = ["zsh"]
 true-color = true
 line-number = "relative"
 mouse = false
