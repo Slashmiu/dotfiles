@@ -101,7 +101,7 @@ export FZF_DEFAULT_OPTS="--ansi --no-separator --no-scrollbar --reverse --border
 --color=fg:#d0d0d0,bg:#121212,hl:#5f87af --color=fg+:#d0d0d0,bg+:#262626,hl+:#5fd7ff --color=info:#afaf87,prompt:#d7005f,pointer:#af5fff --color=marker:#87ff00,spinner:#af5fff,header:#87afaf"
 export FZF_CTRL_T_COMMAND="rg --files --hidden 2> /dev/null --follow --glob '!.git/*'"
 export FZF_CTRL_T_OPTS="--preview 'bat  --color=always --style=plain --line-range :100 {}' --preview-window=border-sharp,right:60%"
-export FZF_ALT_C_COMMAND="fd -t d --hidden"
+#export FZF_ALT_C_COMMAND="fd -t d --hidden"
 export FZF_ALT_C_OPTS="--preview 'tree -aC -L 1 {} | head -200' --preview-window=border-sharp,hidden:right:60% --bind '?:toggle-preview'"
 export RUNEWIDTH_EASTASIAN=0
 #bindkey "^[t" fzf-file-widget
