@@ -93,7 +93,7 @@ add-zsh-hook -Uz chpwd chpwd-osc7-pwd
 #export FZF_TMUX_OPTS="-p 70%"
 #export FZF_BASE=$HOME/.fzf
 
-export FZF_TMUX=1
+export FZF_TMUX="1"
 export FZF_TMUX_OPTS="-p 70%"
 export FZF_BASE=$HOME/.fzf
 export FZF_CTRL_R_OPTS="--reverse --preview 'echo {}' --preview-window=border-sharp,down:3:hidden:wrap --bind '?:toggle-preview'"
@@ -111,5 +111,5 @@ export RUNEWIDTH_EASTASIAN=0
 #bindkey -r "^R"
             
 export NVM_DIR="$HOME/.config/nvm"
-export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
