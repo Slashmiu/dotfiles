@@ -20,7 +20,7 @@ set $term foot
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | rofi -dmenu | xargs swaymsg exec 
 #set $menu rofi -show drun
-set $menu bemenu_path  | wofi -G -show drun | xargs swaymsg exec --
+set $menu dmenu_path  | wofi -G -show drun | xargs swaymsg exec --
 ### Output configuration
   output eDP-1 scale 1.5
 #
