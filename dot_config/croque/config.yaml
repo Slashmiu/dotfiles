@@ -29,7 +29,7 @@ path:
   normal:
     style:
       foreground: black
-      background: blue
+      background: 111
       decoration: []
   error:
     style:
