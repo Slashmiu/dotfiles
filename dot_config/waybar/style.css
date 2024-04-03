@@ -54,8 +54,8 @@
 }
 
 #tray menu menuitem:hover {
-  background-color: #34495E;
-  color: #20E00F;
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 #mode,
