@@ -34,7 +34,7 @@ path:
   error:
     style:
       foreground: black
-      background: 120
+      background: 160
       decoration: []
   shrink:
     enabled: true
@@ -58,7 +58,7 @@ status:
   error:
     style:
       foreground: white
-      background: 120
+      background: 160
       decoration: []
     display_exit_code: true
   content: " {{.exit_status}}{{.root}}{{.jobs}} "
