@@ -34,7 +34,7 @@ path:
   error:
     style:
       foreground: black
-      background: red
+      background: 120
       decoration: []
   shrink:
     enabled: true
@@ -58,7 +58,7 @@ status:
   error:
     style:
       foreground: white
-      background: red
+      background: 120
       decoration: []
     display_exit_code: true
   content: " {{.exit_status}}{{.root}}{{.jobs}} "
@@ -99,7 +99,7 @@ git_status:
   unstaged:
     style:
       foreground: black
-      background: yellow
+      background: 220
       decoration: []
   staged:
     style:
@@ -109,7 +109,7 @@ git_status:
   conflicted:
     style:
       foreground: black
-      background: red
+      background: 160
       decoration: []
   remotes:
     - pattern: github.com
