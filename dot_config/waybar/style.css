@@ -55,15 +55,14 @@
 
 #tray menu *:hover {
   background-color: #00BCD4;
-  color: #000000;
   border-radius: 16px;
 }
 
-#tray menu * {
+#tray menu *:hover {
   color: #000000;
 }
 
-#tray menu {
+#tray menu * {
   background: rgba(0, 0, 0, 1);
   border-radius: 16px;
   border: 2px solid #00BCD4;
