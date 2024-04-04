@@ -94,7 +94,7 @@ git_status:
   clean:
     style:
       foreground: black
-      background: green
+      background: 28
       decoration: []
   unstaged:
     style:
@@ -104,7 +104,7 @@ git_status:
   staged:
     style:
       foreground: black
-      background: green
+      background: 28
       decoration: []
   conflicted:
     style:
