@@ -58,6 +58,10 @@
   color: #FFFFFF;
 }
 
+#tray menu {
+  background-color: #000000;
+}
+
 #mode,
 #cpu,
 #disk,
