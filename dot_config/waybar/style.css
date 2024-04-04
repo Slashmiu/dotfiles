@@ -53,12 +53,12 @@
   border-left: transparent;
 }
 
-#tray menu *:hover {
+#tray menuitem:hover {
   background-color: #00BCD4;
   border-radius: 16px;
 }
 
-#tray menu * {
+#tray menuitem:hover {
   color: #000000;
 }
 
