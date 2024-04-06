@@ -59,7 +59,7 @@
   border-radius: 16px;
 }
 
-#tray menu *:hover selected {
+#tray menu * {
   color: #000000;
 }
 
