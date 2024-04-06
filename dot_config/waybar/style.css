@@ -55,7 +55,7 @@
 
 #tray menu *:hover {
   background-color: #626567;
-  selected-color: #000000;
+  color: #000000;
   border-radius: 16px;
 }
 
