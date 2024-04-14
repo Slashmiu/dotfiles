@@ -36,6 +36,15 @@ function chpwd-osc7-pwd() {
 }
 add-zsh-hook -Uz chpwd chpwd-osc7-pwd
 
+e() {
+    if [ $# -eq 0 ]; then
+        local selected="$(fd --hidden --color=always --exclude='.git' --type=f  | fzf --exit-0 --multi --preview="fzf-preview-file '{}'" --preview-window="right:60%")"
+        [ -n "$selected" ] && "$EDITOR" -- ${(f)selected}
+    else
+        command "$EDITOR" "$@"
+    fi
+}
+
 #fzf.config
 #export FZF_DEFAULT_OPTS=$(cat <<"EOF"
 #--multi
