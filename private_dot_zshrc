@@ -14,7 +14,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 source ~/.zim/init.zsh
 eval "$(croque init zsh)"
 eval "$(zoxide init zsh)" 
-export HELIX_RUNTIME=~/src/helix/runtime
+HELIX_RUNTIME=~/src/helix/runtime
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
