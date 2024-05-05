@@ -11,6 +11,7 @@ ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 [[ ~/.zimc -nt ~/.zim/init.zsh ]] && source ~/.zim/zimfw.zsh init -q
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.cargo/env
 source ~/.zim/init.zsh
 source <(command fx --init)
 eval "$(croque init zsh)"
