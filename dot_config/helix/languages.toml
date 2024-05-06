@@ -95,94 +95,94 @@ zls = { command = "zls" }
 blueprint-compiler = { command = "blueprint-compiler", args = ["lsp"] }
 typst-lsp = { command = "typst-lsp" }
 
-#[language-server.ansible-language-server]
-#command = "ansible-language-server"
-#args = ["--stdio"]
+[language-server.ansible-language-server]
+command = "ansible-language-server"
+args = ["--stdio"]
 
-#[language-server.lua-language-server]
-#command = "lua-language-server"
+[language-server.lua-language-server]
+command = "lua-language-server"
 
-#[language-server.lua-language-server.config.Lua.hint]
-#enable = true
-#arrayIndex = "Enable"
-#setType = true
-#paramName = "All"
-#paramType = true
-#await = true
-
-
-#[language-server.gopls]
-#command = "gopls"
-
-#[language-server.gopls.config.hints]
-#assignVariableTypes = true
-#compositeLiteralFields = true
-#constantValues = true
-#functionTypeParameters = true
-#parameterNames = true
-#rangeVariableTypes = true
-
-#[language-server.golangci-lint-lsp]
-#command = "golangci-lint-langserver"
-
-#[language-server.golangci-lint-lsp.config]
-#command = ["golangci-lint", "run", "--out-format", "json", "--issues-exit-code=1"]
+[language-server.lua-language-server.config.Lua.hint]
+enable = true
+arrayIndex = "Enable"
+setType = true
+paramName = "All"
+paramType = true
+await = true
 
 
-#[language-server.rust-analyzer]
-#command = "rust-analyzer"
+[language-server.gopls]
+command = "gopls"
 
-#[language-server.rust-analyzer.config]
-#inlayHints.bindingModeHints.enable = false
-#inlayHints.closingBraceHints.minLines = 10
-#inlayHints.closureReturnTypeHints.enable = "with_block"
-#inlayHints.discriminantHints.enable = "fieldless"
-#inlayHints.lifetimeElisionHints.enable = "skip_trivial"
-#inlayHints.typeHints.hideClosureInitialization = false
+[language-server.gopls.config.hints]
+assignVariableTypes = true
+compositeLiteralFields = true
+constantValues = true
+functionTypeParameters = true
+parameterNames = true
+rangeVariableTypes = true
+
+[language-server.golangci-lint-lsp]
+command = "golangci-lint-langserver"
+
+[language-server.golangci-lint-lsp.config]
+command = ["golangci-lint", "run", "--out-format", "json", "--issues-exit-code=1"]
 
 
-#[language-server.typescript-language-server]
-#command = "typescript-language-server"
-#args = ["--stdio"]
-#config.hostInfo = "helix"
+[language-server.rust-analyzer]
+command = "rust-analyzer"
 
-#[language-server.typescript-language-server.config.typescript.inlayHints]
-#includeInlayEnumMemberValueHints = true
-#includeInlayFunctionLikeReturnTypeHints = true
-#includeInlayFunctionParameterTypeHints = true
-#includeInlayParameterNameHints = "all"
-#includeInlayParameterNameHintsWhenArgumentMatchesName = true
-#includeInlayPropertyDeclarationTypeHints = true
-#includeInlayVariableTypeHints = true
+[language-server.rust-analyzer.config]
+inlayHints.bindingModeHints.enable = false
+inlayHints.closingBraceHints.minLines = 10
+inlayHints.closureReturnTypeHints.enable = "with_block"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+inlayHints.typeHints.hideClosureInitialization = false
 
-#[language-server.typescript-language-server.config.javascript.inlayHints]
-#includeInlayEnumMemberValueHints = true
-#includeInlayFunctionLikeReturnTypeHints = true
-#includeInlayFunctionParameterTypeHints = true
-#includeInlayParameterNameHints = "all"
-#includeInlayParameterNameHintsWhenArgumentMatchesName = true
-#includeInlayPropertyDeclarationTypeHints = true
-#includeInlayVariableTypeHints = true
 
-#[language-server.svelteserver]
-#command = "svelteserver"
-#args = ["--stdio"]
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
+config.hostInfo = "helix"
 
-#[language-server.svelteserver.config.configuration.typescript]
-#inlayHints.parameterTypes.enabled = true
-#inlayHints.variableTypes.enabled = true
-#inlayHints.propertyDeclarationTypes.enabled = true
-#inlayHints.functionLikeReturnTypes.enabled = true
-#inlayHints.enumMemberValues.enabled = true
-#inlayHints.parameterNames.enabled = "all"
+[language-server.typescript-language-server.config.typescript.inlayHints]
+includeInlayEnumMemberValueHints = true
+includeInlayFunctionLikeReturnTypeHints = true
+includeInlayFunctionParameterTypeHints = true
+includeInlayParameterNameHints = "all"
+includeInlayParameterNameHintsWhenArgumentMatchesName = true
+includeInlayPropertyDeclarationTypeHints = true
+includeInlayVariableTypeHints = true
 
-#[language-server.svelteserver.config.configuration.javascript]
-#inlayHints.parameterTypes.enabled = true
-#inlayHints.variableTypes.enabled = true
-#inlayHints.propertyDeclarationTypes.enabled = true
-#inlayHints.functionLikeReturnTypes.enabled = true
-#inlayHints.enumMemberValues.enabled = true
-#inlayHints.parameterNames.enabled = "all"
+[language-server.typescript-language-server.config.javascript.inlayHints]
+includeInlayEnumMemberValueHints = true
+includeInlayFunctionLikeReturnTypeHints = true
+includeInlayFunctionParameterTypeHints = true
+includeInlayParameterNameHints = "all"
+includeInlayParameterNameHintsWhenArgumentMatchesName = true
+includeInlayPropertyDeclarationTypeHints = true
+includeInlayVariableTypeHints = true
+
+[language-server.svelteserver]
+command = "svelteserver"
+args = ["--stdio"]
+
+[language-server.svelteserver.config.configuration.typescript]
+inlayHints.parameterTypes.enabled = true
+inlayHints.variableTypes.enabled = true
+inlayHints.propertyDeclarationTypes.enabled = true
+inlayHints.functionLikeReturnTypes.enabled = true
+inlayHints.enumMemberValues.enabled = true
+inlayHints.parameterNames.enabled = "all"
+
+[language-server.svelteserver.config.configuration.javascript]
+inlayHints.parameterTypes.enabled = true
+inlayHints.variableTypes.enabled = true
+inlayHints.propertyDeclarationTypes.enabled = true
+inlayHints.functionLikeReturnTypes.enabled = true
+inlayHints.enumMemberValues.enabled = true
+inlayHints.parameterNames.enabled = "all"
 
 [[language]]
 name = "rust"
@@ -192,7 +192,7 @@ file-types = ["rs"]
 roots = ["Cargo.toml", "Cargo.lock"]
 auto-format = true
 comment-token = "//"
-language-servers = [ "rust-analyzer" ]
+#language-servers = [ "rust-analyzer" ]
 indent = { tab-width = 4, unit = "    " }
 persistent-diagnostic-sources = ["rustc", "clippy"]
 
