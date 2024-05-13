@@ -41,7 +41,7 @@ HELIX_RUNTIME=~/src/helix/runtime
 HISTFILE=$HOME/.zsh-history
 HISTSIZE=1000000
 SAVEHIST=1000000
-setup share_history
+setopt share_history
 
 function haf {
     hx $(fzf)
